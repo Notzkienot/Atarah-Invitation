@@ -136,7 +136,23 @@
       <a href="#img9"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" alt="Atarah Photo 9"></a>
       <a href="#img10"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" alt="Atarah Photo 10"></a>
     </div>
-
+    
+    <!-- Slideshow Section -->
+    <div class="special-section">
+      <h2>Photo Slideshow</h2>
+      <div class="slideshow-container" style="position:relative; max-width:800px; margin:0 auto; overflow:hidden;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg" style="width:100%; display:block;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg" style="width:100%; display:none;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg" style="width:100%; display:none;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg" style="width:100%; display:none;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg" style="width:100%; display:none;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg" style="width:100%; display:none;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg" style="width:100%; display:none;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg" style="width:100%; display:none;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" style="width:100%; display:none;">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" style="width:100%; display:none;">
+      </div>
+    </div>
     <!-- Special Sections -->
     <div class="special-section">
       <h2>7 Roses</h2>
@@ -169,6 +185,19 @@
   <!-- Special Lightboxes -->
   <div id="roses" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg" alt="7 Roses"></a></div>
   <div id="ninangs" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg" alt="7 Pretty Ninangs"></a></div>
+
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlides() {
+      slides.forEach(slide => slide.style.display = 'none');
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex-1].style.display = 'block';
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
 
 </body>
 </html>
