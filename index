@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atarah’s 7th Birthday Celebration</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah%20Invitation.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 900px;
+      margin: 50px auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 15px 25px;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #ff69b4;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    a.button:hover {
+      background-color: #ff1493;
+    }
+
+    /* Gallery styling */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 15px;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+
+    /* Special sections styling */
+    .special-section {
+      margin-top: 40px;
+    }
+    .special-section h2 {
+      color: #9932cc;
+      margin-bottom: 20px;
+    }
+    .special-section img {
+      width: 150px;
+      border-radius: 15px;
+      margin: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive music player invisible */
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/HappyBirthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="overlay">
+    <h1>You're Invited!</h1>
+    <p>Join us to celebrate <strong>Atarah’s 7th Birthday</strong></p>
+    <p>🎉 Date: October 20, 2025<br>📍 Venue: Sunshine Park</p>
+    <p>We hope to see you there for fun, games, and cake! 🥳</p>
+    <a class="button" href="#">RSVP Here</a>
+
+    <!-- Gallery Section -->
+    <h2 style="margin-top:40px; color:#9932cc;">Gallery of Atarah</h2>
+    <div class="gallery">
+      <a href="#img1"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg" alt="Atarah Photo 1"></a>
+      <a href="#img2"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg" alt="Atarah Photo 2"></a>
+      <a href="#img3"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg" alt="Atarah Photo 3"></a>
+      <a href="#img4"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg" alt="Atarah Photo 4"></a>
+      <a href="#img5"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg" alt="Atarah Photo 5"></a>
+      <a href="#img6"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg" alt="Atarah Photo 6"></a>
+      <a href="#img7"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg" alt="Atarah Photo 7"></a>
+      <a href="#img8"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg" alt="Atarah Photo 8"></a>
+      <a href="#img9"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" alt="Atarah Photo 9"></a>
+      <a href="#img10"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" alt="Atarah Photo 10"></a>
+    </div>
+
+    <!-- Special Sections -->
+    <div class="special-section">
+      <h2>7 Roses</h2>
+      <img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah%207%20Roses.jpg" alt="7 Roses">
+    </div>
+    <div class="special-section">
+      <h2>7 Pretty Ninangs</h2>
+      <img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7%20Pretty%20Ninang.jpg" alt="7 Pretty Ninangs">
+    </div>
+
+  </div>
+
+  <!-- Lightbox Images -->
+  <div id="img1" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg" alt="Atarah Photo 1"></a></div>
+  <div id="img2" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg" alt="Atarah Photo 2"></a></div>
+  <div id="img3" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg" alt="Atarah Photo 3"></a></div>
+  <div id="img4" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg" alt="Atarah Photo 4"></a></div>
+  <div id="img5" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg" alt="Atarah Photo 5"></a></div>
+  <div id="img6" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg" alt="Atarah Photo 6"></a></div>
+  <div id="img7" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg" alt="Atarah Photo 7"></a></div>
+  <div id="img8" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg" alt="Atarah Photo 8"></a></div>
+  <div id="img9" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" alt="Atarah Photo 9"></a></div>
+  <div id="img10" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" alt="Atarah Photo 10"></a></div>
+
+</body>
+</html>
