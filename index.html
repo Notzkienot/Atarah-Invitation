@@ -93,18 +93,17 @@
     /* Slideshow styling */
     .slideshow-container {
       position: relative;
-      max-width: 800px;
-      height: 300px;
-      margin: 20px auto;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 100%;
+      margin: 20px 0;
     }
     .slide {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 1000px; /* Keep original size without shrinking */
+      margin: 0 auto;
       display: none;
+      object-fit: contain;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     /* Music button */
@@ -123,7 +122,6 @@
       background-color: #ff1493;
     }
 
-    /* Hide default audio player */
     audio {
       display: none;
     }
@@ -146,16 +144,16 @@
     <!-- Gallery Section -->
     <h2 style="margin-top:40px; color:#9932cc;">Gallery of Atarah (Click to view)</h2>
     <div class="gallery">
-      <a href="#img1"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg" alt="Atarah Photo 1"></a>
-      <a href="#img2"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg" alt="Atarah Photo 2"></a>
-      <a href="#img3"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg" alt="Atarah Photo 3"></a>
-      <a href="#img4"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg" alt="Atarah Photo 4"></a>
-      <a href="#img5"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg" alt="Atarah Photo 5"></a>
-      <a href="#img6"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg" alt="Atarah Photo 6"></a>
-      <a href="#img7"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg" alt="Atarah Photo 7"></a>
-      <a href="#img8"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg" alt="Atarah Photo 8"></a>
-      <a href="#img9"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" alt="Atarah Photo 9"></a>
-      <a href="#img10"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" alt="Atarah Photo 10"></a>
+      <a href="#img1"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg"></a>
+      <a href="#img2"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg"></a>
+      <a href="#img3"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg"></a>
+      <a href="#img4"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg"></a>
+      <a href="#img5"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg"></a>
+      <a href="#img6"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg"></a>
+      <a href="#img7"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg"></a>
+      <a href="#img8"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg"></a>
+      <a href="#img9"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg"></a>
+      <a href="#img10"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg"></a>
     </div>
 
     <!-- Slideshow Section -->
@@ -179,13 +177,13 @@
     <div class="special-section">
       <h2>7 Roses</h2>
       <div class="special-gallery">
-        <a href="#roses"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg" alt="7 Roses"></a>
+        <a href="#roses"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg"></a>
       </div>
     </div>
     <div class="special-section">
-      <h2>7 Pretty Ninangs</h2>
+      <h2>7 Pretty Ninang's</h2>
       <div class="special-gallery">
-        <a href="#ninangs"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg" alt="7 Pretty Ninang's"></a>
+        <a href="#ninangs"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg"></a>
       </div>
     </div>
   </div>
@@ -201,8 +199,6 @@
   <div id="img8" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg"></a></div>
   <div id="img9" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg"></a></div>
   <div id="img10" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg"></a></div>
-
-  <!-- Special Lightboxes -->
   <div id="roses" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg"></a></div>
   <div id="ninangs" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg"></a></div>
 
@@ -210,12 +206,10 @@
     // Music autoplay and control
     const music = document.getElementById('bgMusic');
     const musicButton = document.getElementById('musicControl');
-
     music.volume = 0.7;
     music.play().catch(() => {
       musicButton.textContent = "Play Music";
     });
-
     musicButton.addEventListener('click', () => {
       if (music.paused) {
         music.play();
