@@ -46,18 +46,18 @@
     }
 
     /* Animated Gradient Box with transparency */
-    .gradient-box {
-      background: linear-gradient(90deg, rgba(200,78,201,0.75), rgba(255,138,212,0.75), rgba(200,78,201,0.75));
-      background-size: 200% 200%;
-      animation: gradientShift 6s ease-in-out infinite;
-      border-radius: 15px;
-      padding: 25px;
-      color: white;
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-      box-shadow: 0 0 20px rgba(255, 182, 255, 0.4);
-      backdrop-filter: blur(4px);
-    }
+   .gradient-box {
+  background: linear-gradient(90deg, rgba(255,255,255,0.5), rgba(230,200,255,0.4), rgba(255,255,255,0.5));
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease-in-out infinite;
+  border-radius: 15px;
+  padding: 20px;
+  color: #4b2b63; /* dark purple for readability */
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 0 20px rgba(230,200,255,0.3);
+  backdrop-filter: blur(4px); /* adds a frosted-glass effect */
+}
 
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
