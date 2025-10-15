@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: url('https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah%20Invitation.jpg') no-repeat center center fixed;
+      background: url('https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_Invitation.jpg') no-repeat center center fixed;
       background-size: cover;
       margin: 0;
       padding: 0;
@@ -142,11 +142,11 @@
     <!-- Special Sections -->
     <div class="special-section">
       <h2>7 Roses</h2>
-      <img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah%207%20Roses.jpg" alt="7 Roses">
+      <img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg" alt="7 Roses">
     </div>
     <div class="special-section">
       <h2>7 Pretty Ninangs</h2>
-      <img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7%20Pretty%20Ninang.jpg" alt="7 Pretty Ninangs">
+      <img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg" alt="7 Pretty Ninangs">
     </div>
 
   </div>
