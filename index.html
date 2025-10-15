@@ -45,15 +45,6 @@
       100% { background-position: 0% 50%; }
     }
     
-    /* Gradient animated text for the paragraphs */
-       .gradient-text {
-      background: linear-gradient(90deg, #d8b4fe, #7e22ce, #d8b4fe); /* Light purple → Dark purple */
-      background-size: 200% 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: titleGlow 5s ease-in-out infinite;
-      text-shadow: 0 0 10px rgba(200, 150, 255, 0.5);
-    }
     /* Black–Pink gradient for final message */
     .blackpink-text {
       background: linear-gradient(90deg, #000000, #ff66b2, #000000);
@@ -111,18 +102,21 @@
     audio {
       display: none;
     }
-          /* Venue link style */
-      .venue-link {
-        color: #a855f7; /* Light purple */
-        text-decoration: underline !important; /* Force underline */
-        font-weight: bold;
-        transition: color 0.3s ease;
-      }
-      
-      .venue-link:hover {
-        color: #6b21a8; /* Darker purple on hover */
-        text-decoration: underline !important; /* Keeps underline visible */
-      }
+     /* Venue link style */
+.venue-link {
+  color: #a855f7; /* Light purple text */
+  text-decoration: underline !important;
+  text-decoration-color: black; /* Black underline */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.venue-link:hover {
+  color: #6b21a8; /* Darker purple on hover */
+  text-decoration: underline !important;
+  text-decoration-color: black; /* Keep black underline on hover */
+}
+
 
 
     /* Gallery styling */
@@ -225,9 +219,9 @@
     <h1 class="title">Atarah’s 7th Birthday</h1>
 
     <!-- Gradient Event Info Box -->
-    <div class="gradient-text">
-      <p class="gradient-text">Join us to celebrate</p>
-      <p class="gradient-text">🎉 Date and Time: November 08, 2025 (4:00 PM)<br>📍 Venue: <a href="https://www.facebook.com/profile.php?id=100078989138330" target="_blank" class="venue-link">LeiRose Private Pool</a></p>
+    <div class="blackpink-text">
+      <p class="blackpink-text">Join us to celebrate</p>
+      <p class="blackpink-text">🎉 Date and Time: November 08, 2025 (4:00 PM)<br>📍 Venue: <a href="https://www.facebook.com/profile.php?id=100078989138330" target="_blank" class="venue-link">LeiRose Private Pool</a></p>
       <p class="blackpink-text">We hope to see you there for fun, games, and cake! 🥳</p>
 
 
