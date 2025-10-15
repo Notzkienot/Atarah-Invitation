@@ -50,20 +50,24 @@
     }
 
     /* Gallery styling */
-    .gallery {
+    .gallery, .special-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
       margin-top: 30px;
     }
-    .gallery img {
+
+    .gallery img, .special-gallery img {
       width: 100%;
+      height: 150px;
+      object-fit: cover;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.3s;
       cursor: pointer;
     }
-    .gallery img:hover {
+
+    .gallery img:hover, .special-gallery img:hover {
       transform: scale(1.05);
     }
 
@@ -97,12 +101,6 @@
       color: #9932cc;
       margin-bottom: 20px;
     }
-    .special-section img {
-      width: 150px;
-      border-radius: 15px;
-      margin: 5px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
 
     /* Hide default audio player */
     audio {
@@ -120,7 +118,7 @@
   <div class="overlay">
     <h1>You're Invited!</h1>
     <p>Join us to celebrate <strong>Atarah’s 7th Birthday</strong></p>
-    <p>🎉 Date and Time: November 08, 2025 - 4:00 PM <br>📍 Venue: <a href="https://www.facebook.com/profile.php?id=100078989138330"target="_blank">LeiRose</a></p>
+    <p>🎉 Date: November 08, 2025<br>📍 Venue: <a href="https://www.facebook.com/profile.php?id=100078989138330" target="_blank">LeiRose Private Pool</a></p>
     <p>We hope to see you there for fun, games, and cake! 🥳</p>
     <a class="button" href="#">RSVP Here</a>
 
@@ -142,16 +140,21 @@
     <!-- Special Sections -->
     <div class="special-section">
       <h2>7 Roses</h2>
-      <img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg" alt="7 Roses">
+      <div class="special-gallery">
+        <a href="#roses"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg" alt="7 Roses"></a>
+      </div>
     </div>
     <div class="special-section">
       <h2>7 Pretty Ninangs</h2>
-      <img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg" alt="7 Pretty Ninangs">
+      <div class="special-gallery">
+        <a href="#ninangs"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg" alt="7 Pretty Ninangs"></a>
+      </div>
     </div>
 
   </div>
 
   <!-- Lightbox Images -->
+  <!-- Gallery Lightboxes -->
   <div id="img1" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg" alt="Atarah Photo 1"></a></div>
   <div id="img2" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg" alt="Atarah Photo 2"></a></div>
   <div id="img3" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg" alt="Atarah Photo 3"></a></div>
@@ -162,6 +165,10 @@
   <div id="img8" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg" alt="Atarah Photo 8"></a></div>
   <div id="img9" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" alt="Atarah Photo 9"></a></div>
   <div id="img10" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" alt="Atarah Photo 10"></a></div>
+
+  <!-- Special Lightboxes -->
+  <div id="roses" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg" alt="7 Roses"></a></div>
+  <div id="ninangs" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg" alt="7 Pretty Ninangs"></a></div>
 
 </body>
 </html>
