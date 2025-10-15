@@ -11,7 +11,7 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: url('https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_Wallpaper.jpg') no-repeat center center fixed;
+      background: url('https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_Invitation.jpg') no-repeat center center fixed;
       background-size: cover;
       margin: 0;
       padding: 0;
@@ -122,9 +122,25 @@
     .special-section {
       margin-top: 40px;
     }
+
     .special-section h2 {
       color: #9932cc;
       margin-bottom: 20px;
+    }
+
+    /* Music Control Button */
+    #musicControl {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #musicControl:hover {
+      background-color: #ff1493;
     }
 
     /* Hide default audio player */
@@ -136,9 +152,10 @@
 <body>
 
   <!-- Background Music -->
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/HappyBirthday.mp3" type="audio/mpeg">
   </audio>
+  <button id="musicControl">Play Music</button>
 
   <div class="overlay">
     <h1>You're Invited!</h1>
@@ -209,8 +226,9 @@
   <div id="roses" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg" alt="7 Roses"></a></div>
   <div id="ninangs" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg" alt="7 Pretty Ninangs"></a></div>
 
-  <!-- Slideshow Script -->
+  <!-- Scripts -->
   <script>
+    // Slideshow
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');
     function showSlides() {
@@ -221,6 +239,20 @@
       setTimeout(showSlides, 3000);
     }
     showSlides();
+
+    // Music Control
+    const music = document.getElementById('bgMusic');
+    const musicButton = document.getElementById('musicControl');
+
+    musicButton.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        musicButton.textContent = "Pause Music";
+      } else {
+        music.pause();
+        musicButton.textContent = "Play Music";
+      }
+    });
   </script>
 </body>
 </html>
