@@ -81,15 +81,24 @@
 
     /* 💜 Title Styling */
     h1.title {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4em;
-      color: #d8b4fe;  /* Lilac tone */
-      text-shadow: 0 0 10px rgba(168, 85, 247, 0.8),
-                   0 0 20px rgba(221, 160, 255, 0.6);
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 3;
-    }
+  font-family: 'Great Vibes', cursive;
+  font-size: 4em;
+  background: linear-gradient(90deg, #c84ec9, #ff8ad4, #c84ec9);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGlow 5s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 192, 255, 0.6);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes titleGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
     p {
       font-size: 1.2em;
