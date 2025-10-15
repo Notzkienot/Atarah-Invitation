@@ -111,18 +111,19 @@
     audio {
       display: none;
     }
-    /* Venue link style */
-    .venue-link {
-      color: #a855f7; /* Light purple */
-      text-decoration: underline; /* Always underlined */
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    
-    .venue-link:hover {
-      color: #6b21a8; /* Darker purple on hover */
-      text-decoration: underline; /* Keeps underline on hover */
-    }
+          /* Venue link style */
+      .venue-link {
+        color: #a855f7; /* Light purple */
+        text-decoration: underline !important; /* Force underline */
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      
+      .venue-link:hover {
+        color: #6b21a8; /* Darker purple on hover */
+        text-decoration: underline !important; /* Keeps underline visible */
+      }
+
 
     /* Gallery styling */
     .gallery {
