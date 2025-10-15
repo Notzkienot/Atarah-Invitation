@@ -38,14 +38,14 @@
     }
 
     /* Gallery styling */
-    .gallery, .special-gallery {
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
       margin-top: 30px;
     }
 
-    .gallery img, .special-gallery img {
+    .gallery img {
       width: 100%;
       height: 150px;
       object-fit: cover;
@@ -55,7 +55,7 @@
       cursor: pointer;
     }
 
-    .gallery img:hover, .special-gallery img:hover {
+    .gallery img:hover {
       transform: scale(1.05);
     }
 
@@ -77,9 +77,6 @@
       max-height: 90%;
       border-radius: 15px;
     }
-    .lightbox:target {
-      display: flex;
-    }
 
     /* Special sections styling */
     .special-section {
@@ -90,6 +87,21 @@
       margin-bottom: 20px;
     }
 
+    .special-button {
+      padding: 12px 25px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #9932cc;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 15px;
+      transition: background 0.3s;
+    }
+    .special-button:hover {
+      background-color: #7a1ea1;
+    }
+
     /* Slideshow styling */
     .slideshow-container {
       position: relative;
@@ -98,7 +110,7 @@
     }
     .slide {
       width: 100%;
-      max-width: 1000px; /* Keep original size without shrinking */
+      max-width: 1000px;
       margin: 0 auto;
       display: none;
       object-fit: contain;
@@ -173,40 +185,38 @@
       </div>
     </div>
 
-    <!-- Special Sections -->
+    <!-- Special Sections as Buttons -->
     <div class="special-section">
       <h2>7 Roses</h2>
-      <div class="special-gallery">
-        <a href="#roses"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg"></a>
-      </div>
+      <button class="special-button" data-target="#roses">View 7 Roses</button>
     </div>
+
     <div class="special-section">
       <h2>7 Pretty Ninang's</h2>
-      <div class="special-gallery">
-        <a href="#ninangs"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg"></a>
-      </div>
+      <button class="special-button" data-target="#ninangs">View 7 Pretty Ninang's</button>
+    </div>
+
     <div class="special-section">
       <h2>7 Treasures</h2>
-      <div class="special-gallery">
-        <a href="#Treasures"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Treasures.jpg"></a>
-      </div>
+      <button class="special-button" data-target="#Treasures">View 7 Treasures</button>
     </div>
+
   </div>
 
   <!-- Lightbox Images -->
-  <div id="img1" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg"></a></div>
-  <div id="img2" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg"></a></div>
-  <div id="img3" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg"></a></div>
-  <div id="img4" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg"></a></div>
-  <div id="img5" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg"></a></div>
-  <div id="img6" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg"></a></div>
-  <div id="img7" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg"></a></div>
-  <div id="img8" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg"></a></div>
-  <div id="img9" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg"></a></div>
-  <div id="img10" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg"></a></div>
-  <div id="roses" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg"></a></div>
-  <div id="ninangs" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg"></a></div>
-  <div id="Treasures" class="lightbox"><a href="#"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Treasures.jpg"></a></div>
+  <div id="img1" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg"></div>
+  <div id="img2" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg"></div>
+  <div id="img3" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg"></div>
+  <div id="img4" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg"></div>
+  <div id="img5" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg"></div>
+  <div id="img6" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg"></div>
+  <div id="img7" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg"></div>
+  <div id="img8" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg"></div>
+  <div id="img9" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg"></div>
+  <div id="img10" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg"></div>
+  <div id="roses" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg"></div>
+  <div id="ninangs" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg"></div>
+  <div id="Treasures" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Treasures.jpg"></div>
 
   <script>
     // Music autoplay and control
@@ -237,6 +247,33 @@
       setTimeout(showSlides, 3000);
     }
     showSlides();
+
+    // Special buttons to show images
+    const specialButtons = document.querySelectorAll('.special-button');
+    const lightboxes = document.querySelectorAll('.lightbox');
+
+    specialButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.querySelector(btn.getAttribute('data-target'));
+        if (target) target.style.display = 'flex';
+      });
+    });
+
+    // Click outside to close lightbox
+    lightboxes.forEach(lb => {
+      lb.addEventListener('click', e => {
+        if (e.target === lb) lb.style.display = 'none';
+      });
+    });
+
+    // Click gallery images to open lightbox
+    document.querySelectorAll('.gallery a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.style.display = 'flex';
+      });
+    });
   </script>
 
 </body>
