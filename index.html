@@ -78,6 +78,42 @@
       border-radius: 15px;
     }
 
+    /* Special sections styling */
+    .special-section {
+      margin-top: 40px;
+    }
+    .special-section h2 {
+      color: #9932cc;
+      margin-bottom: 20px;
+    }
+
+    .special-button {
+      padding: 12px 25px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #9932cc;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .special-button:hover {
+      background-color: #7a1ea1;
+    }
+
+    /* Container for 2-row, 8-button layout */
+    .special-buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 30px;
+    }
+    .special-buttons-container button {
+      flex: 1 1 calc(25% - 10px); /* 4 buttons per row */
+      min-width: 120px;
+    }
+
     /* Slideshow styling */
     .slideshow-container {
       position: relative;
@@ -112,29 +148,6 @@
 
     audio {
       display: none;
-    }
-
-    /* Special buttons horizontal layout */
-    .special-buttons-row {
-      display: flex;
-      justify-content: space-between; /* equal spacing */
-      flex-wrap: wrap;
-      margin-top: 30px;
-      gap: 10px;
-    }
-
-    .special-button {
-      padding: 12px 20px;
-      font-size: 1em;
-      color: #fff;
-      background-color: #9932cc;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .special-button:hover {
-      background-color: #7a1ea1;
     }
   </style>
 </head>
@@ -184,15 +197,16 @@
       </div>
     </div>
 
-    <!-- Special Buttons Horizontal Layout -->
-    <div class="special-buttons-row">
+    <!-- Special Buttons (8 buttons in 2 rows of 4) -->
+    <div class="special-buttons-container">
       <button class="special-button" data-target="#roses">7 Roses</button>
       <button class="special-button" data-target="#ninangs">7 Ninangs</button>
       <button class="special-button" data-target="#Treasures">7 Treasures</button>
       <button class="special-button" data-target="#Candles">7 Candles</button>
       <button class="special-button" data-target="#cupcake">7 Cupcake</button>
-      <button class="special-button" data-target="#bluebills">Blue Bills</button>
-      <button class="special-button" data-target="#yellowbills">Yellow Bills</button>
+      <button class="special-button" data-target="#bluebills">7 Blue Bills</button>
+      <button class="special-button" data-target="#yellowbills">7 Yellow Bills</button>
+      <button class="special-button" data-target="#balloons">7 Balloons</button>
     </div>
 
   </div>
@@ -208,6 +222,7 @@
   <div id="img8" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg"></div>
   <div id="img9" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg"></div>
   <div id="img10" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg"></div>
+
   <div id="roses" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg"></div>
   <div id="ninangs" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg"></div>
   <div id="Treasures" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Treasures.jpg"></div>
@@ -215,6 +230,7 @@
   <div id="cupcake" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Cupcake.jpg"></div>
   <div id="bluebills" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Blue_Bills.jpg"></div>
   <div id="yellowbills" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Yellow_Bills.jpg"></div>
+  <div id="balloons" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Balloons.jpg"></div>
 
   <script>
     // Music autoplay and control
