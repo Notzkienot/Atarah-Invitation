@@ -45,11 +45,52 @@
       100% { background-position: 0% 50%; }
     }
 
+    /* Animated Gradient Box with transparency */
+    .gradient-box {
+      background: linear-gradient(90deg, rgba(200,78,201,0.75), rgba(255,138,212,0.75), rgba(200,78,201,0.75));
+      background-size: 200% 200%;
+      animation: gradientShift 6s ease-in-out infinite;
+      border-radius: 15px;
+      padding: 25px;
+      color: white;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 0 20px rgba(255, 182, 255, 0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     p {
       font-size: 1.2em;
-      margin-bottom: 20px;
-      position: relative;
+      margin-bottom: 15px;
       z-index: 3;
+      position: relative;
+    }
+
+    /* Centered Music Button */
+    #musicControl {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 25px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #musicControl:hover {
+      background-color: #ff1493;
+    }
+
+    audio {
+      display: none;
     }
 
     /* Gallery styling */
@@ -144,37 +185,22 @@
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-
-    /* Music button */
-    #musicControl {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 1em;
-      color: #fff;
-      background-color: #ff69b4;
-      border: none;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      cursor: pointer;
-    }
-    #musicControl:hover {
-      background-color: #ff1493;
-    }
-
-    audio {
-      display: none;
-    }
   </style>
 </head>
 <body>
 
   <div class="overlay">
     <h1 class="title">Atarah’s 7th Birthday</h1>
-    <p>Join us to celebrate</p>
-    <p>🎉 Date and Time: November 08, 2025 (4:00 PM)<br>📍 Venue: <a href="https://www.facebook.com/profile.php?id=100078989138330" target="_blank">LeiRose Private Pool</a></p>
-    <p>We hope to see you there for fun, games, and cake! 🥳</p>
 
-    <!-- Music Control -->
+    <!-- Gradient Event Info Box -->
+    <div class="gradient-box">
+      <p>Join us to celebrate</p>
+      <p>🎉 Date and Time: November 08, 2025 (4:00 PM)</p>
+      <p>📍 Venue: <a href="https://www.facebook.com/profile.php?id=100078989138330" target="_blank" style="color:#fff; text-decoration:underline;">LeiRose Private Pool</a></p>
+      <p>We hope to see you there for fun, games, and cake! 🥳</p>
+    </div>
+
+    <!-- Music Player -->
     <audio id="bgMusic" loop>
       <source src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_Music.mp3" type="audio/mpeg">
     </audio>
@@ -212,7 +238,7 @@
       </div>
     </div>
 
-    <!-- Special Buttons (8 buttons in 2 rows of 4) -->
+    <!-- 8 Special Buttons -->
     <div class="special-buttons-container">
       <button class="special-button" data-target="#roses">7 Roses</button>
       <button class="special-button" data-target="#ninangs">7 Pretty Ninang's</button>
@@ -226,7 +252,7 @@
 
   </div>
 
-  <!-- Lightbox Images -->
+  <!-- Lightboxes -->
   <div id="img1" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg"></div>
   <div id="img2" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg"></div>
   <div id="img3" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg"></div>
@@ -277,25 +303,20 @@
     }
     showSlides();
 
-    // Special buttons to show images
+    // Special buttons and lightbox logic
     const specialButtons = document.querySelectorAll('.special-button');
     const lightboxes = document.querySelectorAll('.lightbox');
-
     specialButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const target = document.querySelector(btn.getAttribute('data-target'));
         if (target) target.style.display = 'flex';
       });
     });
-
-    // Click outside to close lightbox
     lightboxes.forEach(lb => {
       lb.addEventListener('click', e => {
         if (e.target === lb) lb.style.display = 'none';
       });
     });
-
-    // Click gallery images to open lightbox
     document.querySelectorAll('.gallery a').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
