@@ -16,70 +16,15 @@
       text-align: center;
     }
 
-    /* ✨ Animated Cloudy Overlay + Glitter Effect */
     .overlay {
-      position: relative;
-      background: linear-gradient(135deg, #ffd6e8, #e5ccff, #ffc8dd, #d8b4fe);
-      background-size: 400% 400%;
-      animation: cloudyGradient 40s ease infinite;
-      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.85);
       padding: 40px;
       border-radius: 20px;
       max-width: 900px;
       margin: 50px auto;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      overflow: hidden;
     }
 
-    @keyframes cloudyGradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* 🌫️ Soft Mist Layer */
-    .overlay::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 70%),
-                  radial-gradient(circle at 70% 70%, rgba(255,255,255,0.25), transparent 70%);
-      border-radius: 20px;
-      pointer-events: none;
-      animation: mistMove 30s ease-in-out infinite alternate;
-      z-index: 1;
-    }
-
-    @keyframes mistMove {
-      0% { transform: translate(0, 0); opacity: 0.6; }
-      50% { transform: translate(10px, -10px); opacity: 0.8; }
-      100% { transform: translate(-10px, 10px); opacity: 0.6; }
-    }
-
-    /* ✨ Glitter Layer */
-    .overlay::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.9), transparent),
-                        radial-gradient(2px 2px at 80% 70%, rgba(255,255,255,0.8), transparent),
-                        radial-gradient(1.5px 1.5px at 50% 50%, rgba(255,255,255,0.7), transparent),
-                        radial-gradient(1.5px 1.5px at 10% 80%, rgba(255,255,255,0.8), transparent),
-                        radial-gradient(1.5px 1.5px at 90% 20%, rgba(255,255,255,0.8), transparent);
-      background-size: 200% 200%;
-      animation: glitterMove 5s linear infinite;
-      border-radius: 20px;
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    @keyframes glitterMove {
-      0% { background-position: 0% 0%; opacity: 1; }
-      50% { background-position: 100% 100%; opacity: 0.8; }
-      100% { background-position: 0% 0%; opacity: 1; }
-    }
-
-    /* 💜 Title Styling */
     h1.title {
       font-family: 'Great Vibes', cursive;
       font-size: 4em;
@@ -113,8 +58,6 @@
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
       margin-top: 30px;
-      position: relative;
-      z-index: 3;
     }
 
     .gallery img {
@@ -153,8 +96,6 @@
     /* Special sections styling */
     .special-section {
       margin-top: 40px;
-      position: relative;
-      z-index: 3;
     }
     .special-section h2 {
       color: #9932cc;
@@ -170,8 +111,6 @@
       border-radius: 10px;
       cursor: pointer;
       transition: background 0.3s;
-      z-index: 3;
-      position: relative;
     }
     .special-button:hover {
       background-color: #7a1ea1;
@@ -184,11 +123,9 @@
       justify-content: space-between;
       gap: 10px;
       margin-top: 30px;
-      position: relative;
-      z-index: 3;
     }
     .special-buttons-container button {
-      flex: 1 1 calc(25% - 10px);
+      flex: 1 1 calc(25% - 10px); /* 4 buttons per row */
       min-width: 120px;
     }
 
@@ -197,7 +134,6 @@
       position: relative;
       width: 100%;
       margin: 20px 0;
-      z-index: 3;
     }
     .slide {
       width: 100%;
@@ -220,8 +156,6 @@
       border-radius: 10px;
       margin-bottom: 20px;
       cursor: pointer;
-      z-index: 3;
-      position: relative;
     }
     #musicControl:hover {
       background-color: #ff1493;
@@ -249,36 +183,36 @@
     <!-- Gallery Section -->
     <h2 style="margin-top:40px; color:#9932cc;">Gallery of Atarah (Click to view)</h2>
     <div class="gallery">
-      <a href="#img1"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg" alt="Atarah 1"></a>
-      <a href="#img2"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg" alt="Atarah 2"></a>
-      <a href="#img3"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg" alt="Atarah 3"></a>
-      <a href="#img4"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg" alt="Atarah 4"></a>
-      <a href="#img5"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg" alt="Atarah 5"></a>
-      <a href="#img6"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg" alt="Atarah 6"></a>
-      <a href="#img7"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg" alt="Atarah 7"></a>
-      <a href="#img8"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg" alt="Atarah 8"></a>
-      <a href="#img9"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" alt="Atarah 9"></a>
-      <a href="#img10"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" alt="Atarah 10"></a>
+      <a href="#img1"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg"></a>
+      <a href="#img2"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg"></a>
+      <a href="#img3"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg"></a>
+      <a href="#img4"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg"></a>
+      <a href="#img5"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg"></a>
+      <a href="#img6"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg"></a>
+      <a href="#img7"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg"></a>
+      <a href="#img8"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg"></a>
+      <a href="#img9"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg"></a>
+      <a href="#img10"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg"></a>
     </div>
 
     <!-- Slideshow Section -->
     <div class="special-section">
       <h2>Photo Slideshow</h2>
       <div class="slideshow-container">
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg" alt="Slide 1" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg" alt="Slide 2" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg" alt="Slide 3" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg" alt="Slide 4" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg" alt="Slide 5" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg" alt="Slide 6" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg" alt="Slide 7" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg" alt="Slide 8" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" alt="Slide 9" />
-        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" alt="Slide 10" />
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg">
+        <img class="slide" src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg">
       </div>
     </div>
 
-    <!-- Special Buttons -->
+    <!-- Special Buttons (8 buttons in 2 rows of 4) -->
     <div class="special-buttons-container">
       <button class="special-button" data-target="#roses">7 Roses</button>
       <button class="special-button" data-target="#ninangs">7 Pretty Ninang's</button>
@@ -290,70 +224,83 @@
       <button class="special-button" data-target="#balloons">7 Balloons</button>
     </div>
 
-    <!-- Hidden Lightboxes for Gallery -->
-    <div id="img1" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg" alt="Atarah 1"></div>
-    <div id="img2" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg" alt="Atarah 2"></div>
-    <div id="img3" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg" alt="Atarah 3"></div>
-    <div id="img4" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg" alt="Atarah 4"></div>
-    <div id="img5" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg" alt="Atarah 5"></div>
-    <div id="img6" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg" alt="Atarah 6"></div>
-    <div id="img7" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg" alt="Atarah 7"></div>
-    <div id="img8" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg" alt="Atarah 8"></div>
-    <div id="img9" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg" alt="Atarah 9"></div>
-    <div id="img10" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg" alt="Atarah 10"></div>
   </div>
 
-  <script>
-    // Music Control Button
-    const music = document.getElementById('bgMusic');
-    const musicControl = document.getElementById('musicControl');
-    music.play();
+  <!-- Lightbox Images -->
+  <div id="img1" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah1.jpg"></div>
+  <div id="img2" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah2.jpg"></div>
+  <div id="img3" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah3.jpg"></div>
+  <div id="img4" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah4.jpg"></div>
+  <div id="img5" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah5.jpg"></div>
+  <div id="img6" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah6.jpg"></div>
+  <div id="img7" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah7.jpg"></div>
+  <div id="img8" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah8.jpg"></div>
+  <div id="img9" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah9.jpg"></div>
+  <div id="img10" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah10.jpg"></div>
 
-    musicControl.addEventListener('click', () => {
-      if(music.paused) {
+  <div id="roses" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/Atarah_7_Roses.jpg"></div>
+  <div id="ninangs" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Pretty_Ninang.jpg"></div>
+  <div id="Treasures" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Treasures.jpg"></div>
+  <div id="Candles" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Candles.png"></div>
+  <div id="cupcake" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Cupcake.jpg"></div>
+  <div id="bluebills" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Blue_Bills.jpg"></div>
+  <div id="yellowbills" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Yellow_Bills.jpg"></div>
+  <div id="balloons" class="lightbox"><img src="https://raw.githubusercontent.com/Notzkienot/Atarah-Invitation/main/7_Balloons.jpg"></div>
+
+  <script>
+    // Music autoplay and control
+    const music = document.getElementById('bgMusic');
+    const musicButton = document.getElementById('musicControl');
+    music.volume = 0.7;
+    music.play().catch(() => {
+      musicButton.textContent = "Play Music";
+    });
+    musicButton.addEventListener('click', () => {
+      if (music.paused) {
         music.play();
-        musicControl.textContent = 'Pause Music';
+        musicButton.textContent = "Pause Music";
       } else {
         music.pause();
-        musicControl.textContent = 'Play Music';
+        musicButton.textContent = "Play Music";
       }
     });
 
-    // Gallery lightbox handling - FIXED: prevent jumping and show lightbox
-    document.querySelectorAll('.gallery a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault(); // Prevent default anchor behavior (jump)
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          target.style.display = 'flex';
-        }
-      });
-    });
-
-    // Hide lightbox on click
-    document.querySelectorAll('.lightbox').forEach(lightbox => {
-      lightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-      });
-    });
-
-    // Slideshow
+    // Slideshow script
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');
-
     function showSlides() {
-      slides.forEach(s => s.style.display = 'none');
+      slides.forEach(slide => slide.style.display = 'none');
       slideIndex++;
       if (slideIndex > slides.length) slideIndex = 1;
-      slides[slideIndex - 1].style.display = 'block';
-      setTimeout(showSlides, 3500);
+      slides[slideIndex-1].style.display = 'block';
+      setTimeout(showSlides, 3000);
     }
     showSlides();
 
-    // Special Buttons alert
-    document.querySelectorAll('.special-button').forEach(btn => {
+    // Special buttons to show images
+    const specialButtons = document.querySelectorAll('.special-button');
+    const lightboxes = document.querySelectorAll('.lightbox');
+
+    specialButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        alert(`You clicked on "${btn.textContent}" button! (Add your custom action here)`);
+        const target = document.querySelector(btn.getAttribute('data-target'));
+        if (target) target.style.display = 'flex';
+      });
+    });
+
+    // Click outside to close lightbox
+    lightboxes.forEach(lb => {
+      lb.addEventListener('click', e => {
+        if (e.target === lb) lb.style.display = 'none';
+      });
+    });
+
+    // Click gallery images to open lightbox
+    document.querySelectorAll('.gallery a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.style.display = 'flex';
       });
     });
   </script>
