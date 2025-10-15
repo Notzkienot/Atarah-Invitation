@@ -44,6 +44,16 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+    
+    /* Gradient animated text for the paragraphs */
+    .gradient-text {
+      background: linear-gradient(90deg, #c84ec9, #ff8ad4, #c84ec9);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: titleGlow 5s ease-in-out infinite;
+      text-shadow: 0 0 10px rgba(255, 192, 255, 0.5);
+    }
 
     /* Animated Gradient Box with transparency */
    .gradient-box {
@@ -194,10 +204,10 @@
 
     <!-- Gradient Event Info Box -->
     <div class="gradient-box">
-      <p>Join us to celebrate</p>
-      <p>🎉 Date and Time: November 08, 2025 (4:00 PM)</p>
-      <p>📍 Venue: <a href="https://www.facebook.com/profile.php?id=100078989138330" target="_blank" style="color:#fff; text-decoration:underline;">LeiRose Private Pool</a></p>
-      <p>We hope to see you there for fun, games, and cake! 🥳</p>
+      <p class="gradient-text">Join us to celebrate</p>
+      <p class="gradient-text">🎉 Date and Time: November 08, 2025 (4:00 PM)<br>📍 Venue: <a href="https://www.facebook.com/profile.php?id=100078989138330" target="_blank">LeiRose Private Pool</a></p>
+      <p class="gradient-text">We hope to see you there for fun, games, and cake! 🥳</p>
+
     </div>
 
     <!-- Music Player -->
