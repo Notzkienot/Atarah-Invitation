@@ -16,13 +16,43 @@
       text-align: center;
     }
 
+    /* ✨ Animated Cloudy Overlay */
     .overlay {
-      background-color: rgba(255, 255, 255, 0.85);
+      position: relative;
+      background: linear-gradient(135deg, #ffd6e8, #e5ccff, #ffc8dd, #d8b4fe);
+      background-size: 400% 400%;
+      animation: cloudyGradient 40s ease infinite;
+      backdrop-filter: blur(8px);
       padding: 40px;
       border-radius: 20px;
       max-width: 900px;
       margin: 50px auto;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+
+    @keyframes cloudyGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 🌫️ Soft Mist Effect */
+    .overlay::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 70%),
+                  radial-gradient(circle at 70% 70%, rgba(255,255,255,0.25), transparent 70%);
+      border-radius: 20px;
+      pointer-events: none;
+      animation: mistMove 30s ease-in-out infinite alternate;
+    }
+
+    @keyframes mistMove {
+      0% { transform: translate(0, 0); opacity: 0.6; }
+      50% { transform: translate(10px, -10px); opacity: 0.8; }
+      100% { transform: translate(-10px, 10px); opacity: 0.6; }
     }
 
     h1.title {
@@ -208,7 +238,6 @@
       <button class="special-button" data-target="#yellowbills">7 Yellow Bills</button>
       <button class="special-button" data-target="#balloons">7 Balloons</button>
     </div>
-
   </div>
 
   <!-- Lightbox Images -->
